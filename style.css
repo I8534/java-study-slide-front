@@ -1,0 +1,68 @@
+* {
+  font-family: 'Jua', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+
+.slide-wrapper {
+  overflow: hidden;
+  /* 왜 여기다 넣었는지 그리고 왜 오버플로우 히든이 작동을 하는지?
+  밑에 슬라이드 리스트 너비가 300vw인데 그러면 충분히 넓은 거 아닌지? */
+  /* 부모의 가로 너비는 기본적으로 100%이다. 이 경우 딱 화면만큼이 100%이다.  */
+}
+
+
+.slide-list {
+  position: relative;
+  width: 300vw;
+  display: flex;
+  height: 100vh;
+  transition: transform 200ms;
+}
+
+.slide-item {
+  width: 100vw;
+  height: 100%;
+}
+
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: fixed;
+  z-index: 10;
+  /* left: 50%;
+  bottom: 3%;
+  transform: translate(-50%, 0); */
+}
+
+.btn-group button {
+  border: none;
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  color: white;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.btn-group button:last-child {
+  margin-right: 0px;
+}
+
+
+
